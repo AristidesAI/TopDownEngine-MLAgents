@@ -11,7 +11,7 @@ This folder contains the ML-Agents adapter for TopDownEngine, allowing you to tr
 - **AIActionMLAgents.cs** - TopDownEngine AIAction for ML-Agents control
 - **ReadOnlyAttribute.cs** - Helper attribute for inspector fields
 - **INTEGRATION_GUIDE.md** - Detailed integration instructions
-- **config/spook_ai_config.yaml** - Sample ML-Agents training configuration
+- **config/_ai_config.yaml** - Sample ML-Agents training configuration
 
 ## Quick Start
 
