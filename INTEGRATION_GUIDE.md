@@ -56,7 +56,7 @@ Runtime inference using Unity Sentis for deployed models.
 ### Step 1: Copy Files to Your Project
 
 1. Copy all files from the `ML-TD` folder to your Unity project's `Assets/Scripts/MLAgents/` directory
-2. Ensure the namespace `SpookNet.MLAgents` doesn't conflict with your project
+2. Ensure the namespace `testNet.MLAgents` doesn't conflict with your project
 
 ### Step 2: Add Required Packages
 
@@ -71,11 +71,11 @@ In Unity Package Manager, add:
 
 Create an assembly definition file to manage dependencies:
 
-**File:** `SpookNet.MLAgents.asmdef`
+**File:** `testNet.MLAgents.asmdef`
 ```json
 {
-    "name": "SpookNet.MLAgents",
-    "rootNamespace": "SpookNet.MLAgents",
+    "name": "testNet.MLAgents",
+    "rootNamespace": "testNet.MLAgents",
     "references": [
         "Unity.MLAgents",
         "Unity.MLAgents.Policies",
@@ -117,7 +117,7 @@ Create an assembly definition file to manage dependencies:
 
 4. **Configure BehaviorParameters:**
    ```
-   - Behavior Name: "SpookAI"
+   - Behavior Name: "TestAI"
    - Vector Observation Space Size: 
      - Base: 4 (position + velocity)
      - Threat: 9 (if enabled)
@@ -150,10 +150,10 @@ Create an assembly definition file to manage dependencies:
 
 Create a YAML config file for ML-Agents training:
 
-**File:** `config/spook_ai_config.yaml`
+**File:** `config/Test_ai_config.yaml`
 ```yaml
 behaviors:
-  SpookAI:
+  TestAI:
     trainer_type: ppo
     hyperparameters:
       batch_size: 1024
@@ -202,7 +202,7 @@ Ensure your project has proper layers:
 
 2. **Start training:**
    ```bash
-   mlagents-learn config/spook_ai_config.yaml --run-id=SpookAI_001
+   mlagents-learn config/Test_ai_config.yaml --run-id=testAI_001
    ```
 
 3. **Press Play in Unity** when prompted
